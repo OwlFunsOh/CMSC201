@@ -1,0 +1,21 @@
+"""
+Filename: derangements.py
+Author: Alfonso Sebastian Apelacio Martinez
+Date: 11/29/2021
+Section: 42
+E-mail: amartin6@umbc.edu
+Description:
+"""
+
+
+def derangement(number):
+    if number <= 0:
+        return 1
+    else:
+        return (number * derangement(number - 1)) + ((-1) ** number)
+
+
+    
+if __name__ == '__main__':
+    print(derangement(4))
+    print(derangement(7))

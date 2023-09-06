@@ -1,0 +1,25 @@
+"""
+File: robot_test.py
+Author: Alfonso Sebastian Martinez
+Date: 09/20/2021
+E-mail: amartin6@umbc.edu
+Description: The program asks questions to determine if you really are
+             a robot or not
+"""
+
+robot_or_human = input("Be you a robot, or human? ")
+
+if robot_or_human == "robot":
+    print("Administer the test!")
+    print("Which of the following would you prefer?")
+    print("\t a cute (puppy)")
+    print("\t a (flower) from your sweetie")
+    print("\t A large properly formatted (data file)")
+    choice = input("Choose! ")
+    if choice == "puppy":
+        print ("Get the intruder! Get the humanoid!")
+    elif choice == "flower":
+        print("That is acceptable, pass on mechanical friend")
+    else:
+        print("Very good, you are a robot of some esteem.")
+    

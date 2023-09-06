@@ -1,0 +1,71 @@
+"""
+File:    debugging.py
+Author:  Alfonso Sebastian Apelacio Martinez
+Date:    11/08/2021
+Section: 42
+E-mail:  amartin6@umbc.edu
+Description:
+  DESCRIPTION OF WHAT THE PROGRAM DOES
+"""
+
+
+def create_new_weird_2d_list(height, width, value):
+    """
+    Creates a 2d list where all values are initialized to the supplied value
+    :param height: the amount of sublists
+    :param width: the size of each sublist
+    :param value: the value to initialize each item in the list
+    :return: a 2d list
+    """
+    row = []
+    mat = []
+
+    for i in range(width):
+        row.append(value)
+
+    for i in range(height):
+        mat.append(row)
+
+    return mat
+
+
+def create_new_not_weird_2d_list(height, width, value):
+    """
+    Creates a 2d list where all values are initialized to the supplied value
+    :param height: the amount of sublists
+    :param width: the size of each sublist
+    :param value: the value to initialize each item in the list
+    :return: a 2d list
+    """
+    # hint hint hint: make two nested for loops that utilize range()
+    row = []
+    column = []
+    
+    for i in range(width):
+        row.append(value)
+        
+    for i in range(height):
+        column.append([])
+
+    for i in range(len(column)):
+        for j in range(len(row)):
+            column[i].append(row[j])
+
+    
+
+    return column
+
+if __name__ == '__main__':
+    matrix = create_new_weird_2d_list(4, 4, 0)
+    matrix[0][1] = 1
+    matrix[2][3] = 2
+    #print(matrix)
+    # I'm expecting [[0, 1, 0, 0], [0, 0, 0, 0], [0, 0, 0, 2], [0, 0, 0, 0]]
+    # but what do I get...?
+
+
+    new_matrix = create_new_not_weird_2d_list(3, 3, 37)
+    new_matrix[0][0] = 48
+    new_matrix[1][1] = 48
+    new_matrix[2][2] = 48
+    print(new_matrix)

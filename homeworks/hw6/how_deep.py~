@@ -1,0 +1,29 @@
+"""
+Filename: how_deep.py
+Author: Alfonso Sebastian Apelacio Martinez
+Date: 11/29/2021
+Section: 42
+E-mail: amartin6@umbc.edu
+Description: Checks how deep the list is
+"""
+
+def how_deep(list_struct):
+    # base case
+    if len(list_struct) == 0:
+        return 1
+
+    # recursive case
+    else:
+        for each_list in list_struct:
+            depth = 1
+            if len(each_list) == 0:
+                return 1
+            else:
+                how_deep(each_list)
+            depth += 1
+            depth = how_deep(each_list) + depth
+            return depth
+if __name__ == "__main__":
+    print(how_deep([]))
+    print(how_deep([[[]]]))
+    print(how_deep([[[], [], [], [[[]]]], []]))

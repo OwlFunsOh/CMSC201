@@ -1,0 +1,24 @@
+"""
+File: monster_battles.py
+Author: Alfonso Sebastian Martinez
+Date: 09/20/2021
+Section: 42
+E-mail: amartin6@umbc.edu
+Description:
+"""
+
+monster_one_name = input("What is the name of the first monster? ")
+monster_one_damage = int(input("How much damage does the first monster do? "))
+monster_one_hitpoints = int(input("How many hitpoints does the first monster have? "))
+
+monster_two_name = input("What is the name of the second monster? ")
+monster_two_damage = int(input("How much damage does the second monster do? "))
+monster_two_hitpoints = int(input("How many hitpoints does the second monster have? "))
+
+if monster_two_hitpoints / monster_one_damage == monster_one_hitpoints / monster_two_damage:
+    print("The two monsters annihilate each other")
+elif monster_two_hitpoints / monster_one_damage > monster_one_hitpoints / monster_two_damage:
+    print(monster_two_name + " beats " + monster_one_name)
+else:
+    print(monster_one_name + " beats " + monster_two_name)
+
